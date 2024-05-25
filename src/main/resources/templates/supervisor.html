@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/supervisor.css}">
+</head>
+
+<body>
+    <h6>Register For Supervisor</h6>
+    <form  method="get" action="register/">
+        <div>
+            <input required class="text" type="text" name="name" placeholder="username">
+        </div>
+        <div>
+            <input required class="text" type="password" name="password" placeholder="password">
+        </div>
+        <div>
+            <input class="input" type="submit" value="register">
+        </div>
+    </form>
+</body>
+
+</html>

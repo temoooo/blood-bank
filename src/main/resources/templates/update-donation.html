@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+    <h6>Update Donation</h6>
+    <form  method="post" th:action="@{'/donation/update/?id=' + ${donation.id}}">
+        <div>
+            <input class="text" type="text" name="donateDate" placeholder="donateDate" th:value="${donation.donateDate}">
+        </div>
+        <div>
+            <input hidden class="text" type="text" name="bloodType" placeholder="bloodType" th:value="${donation.bloodType}">
+        </div>
+        <div>
+            <input class="text" type="text" name="quantity" placeholder="quantity" th:value="${donation.quantity}">
+        </div>
+        <div>
+            <input class="text" type="text" name="redBloodCells" placeholder="redBloodCells" th:value="${donation.redBloodCells}">
+        </div>
+        <div>
+            <input class="text" type="text" name="plasma" placeholder="plasma" th:value="${donation.plasma}">
+        </div>
+        <div>
+            <input class="text" type="text" name="platelets" placeholder="platelets" th:value="${donation.platelets}">
+        </div>
+        <div>
+            <input class="input" type="submit" value="Update">
+        </div>
+    </form>
+</body>
+
+</html>

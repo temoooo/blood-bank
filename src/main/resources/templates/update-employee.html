@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+    <h6>Update Employee</h6>
+    <form  method="post" th:action="@{'/employee/update/'+${idE}+'/'+${idS}}+'/'">
+        <div>
+            <input class="text" type="text" name="name" placeholder="username" th:value="${employee.name}">
+        </div>
+        <div>
+            <input class="text" type="text" name="password" placeholder="password" th:value="${employee.password}">
+        </div>
+        <div>
+            <input class="text" type="text" name="phone" placeholder="phone" th:value="${employee.phone}">
+        </div>
+        <div>
+            <input class="text" type="text" name="monthSalary" placeholder="monthSalary" th:value="${employee.monthSalary}">
+        </div>
+        <div>
+            <input class="text" type="text" name="department" placeholder="department" th:value="${employee.department}">
+        </div>
+        <div>
+            <input class="text" type="text" name="universityDegree" placeholder="universityDegree" th:value="${employee.universityDegree}">
+        </div>
+        <input type="text" name="supervisor_id" value="-1" hidden>
+        <div>
+            <input class="input" type="submit" value="Update">
+        </div>
+    </form>
+</body>
+
+</html>

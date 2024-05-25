@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>employees</title>
+    <link rel="stylesheet" th:href="@{/css/all-employee.css}">
+</head>
+
+<body>
+    <h6>All Diseases For This Downer</h6>
+    <a 
+    style="display: block; margin: 10px auto; width: fit-content;" 
+    th:href="@{'/diseases/create/?id='+${id}}"
+    >Add Check Blood</a>
+    <div class="card" th:each="prod: ${diseases}">
+        <div>
+            <span>contentExam : <span th:text=${prod.contentExam}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>examinationDate : <span th:text=${prod.examinationDate}></span></span>
+        </div>
+        <br>
+    </div>
+
+    <br />
+</body>
+
+</html>

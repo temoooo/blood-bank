@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>employees</title>
+    <link rel="stylesheet" th:href="@{/css/all-employee.css}">
+</head>
+
+<body>
+    <h6>All Employee</h6>
+    <div class="card" th:each="prod: ${employeeList}">
+        <div>
+            <span>name : <span th:text=${prod.name}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>phone : <span th:text=${prod.phone}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>monthSalary : <span th:text=${prod.monthSalary}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>department : <span th:text=${prod.department}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>universityDegree : <span th:text=${prod.universityDegree}></span></span>
+        </div>
+        <br>
+        <div class="manage">
+            <a th:href="@{'/employee/update?idE=' + ${prod.id} +'&idS='+${id}}">Update</a>
+            <a th:href="@{'/employee/delete/?id=' + ${prod.id}}">Delete</a>
+        </div>
+    </div>
+
+    <br />
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>employees</title>
+    <link rel="stylesheet" th:href="@{/css/all-employee.css}">
+</head>
+
+<body>
+    <h6>All Downer</h6>
+    <div class="card" th:each="prod: ${downerList}">
+        <div>
+            <span>name : <span th:text=${prod.name}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>phone : <span th:text=${prod.phone}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>bloodType : <span th:text=${prod.bloodType}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>weight : <span th:text=${prod.weight}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>medicalExaminations : <span th:text=${prod.medicalExaminations}></span></span>
+        </div>
+        <br>
+        <div class="manage">
+            <a th:href="@{'/diseases/all/?id=' + ${prod.id}}">All Check Blood</a>
+            <a th:href="@{'/donation/all/?id=' + ${prod.id}}">All Donation</a>
+        </div>
+    </div>
+
+    <br />
+</body>
+
+</html>

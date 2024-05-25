@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+    <h6>Login For Supervisor</h6>
+    <form  method="get" action="login/">
+        <div>
+            <input required class="text" type="text" name="name" placeholder="username">
+        </div>
+        <div>
+            <input required class="text" type="password" name="password" placeholder="password">
+        </div>
+        <div>
+            <input class="input" type="submit" value="login">
+        </div>
+    </form>
+    <div class="link">
+        if you don't have account press
+        <a href="/supervisor/register">here</a>
+    </div>
+    <div class="link">
+        if you are employee press
+        <a href="/employee/login">here</a>
+    </div>
+</body>
+
+</html>

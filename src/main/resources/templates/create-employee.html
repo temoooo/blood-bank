@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+    <h6>Create New Employee</h6>
+    <form  method="post" action="/employee/createEmployee/">
+        <div>
+            <input required class="text" type="text" name="name" placeholder="username">
+        </div>
+        <div>
+            <input required class="text" type="password" name="password" placeholder="password">
+        </div>
+        <div>
+            <input required class="text" type="text" name="phone" placeholder="phone">
+        </div>
+        <div>
+            <input required class="text" type="number" name="monthSalary" placeholder="monthSalary">
+        </div>
+        <div>
+            <input required class="text" type="text" name="department" placeholder="department">
+        </div>
+        <div>
+            <input required class="text" type="number" name="universityDegree" placeholder="universityDegree">
+        </div>
+        <input type="text" name="supervisor_id" th:value="${id}" hidden>
+        <div>
+            <input class="input" type="submit" value="Create">
+        </div>
+    </form>
+</body>
+
+</html>

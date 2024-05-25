@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>employees</title>
+    <link rel="stylesheet" th:href="@{/css/manage.css}">
+</head>
+
+<body>
+    <h6>Manager</h6>
+    <a th:href="@{'/employee/all/?id=' + ${id}}">View All Employees</a>
+    <a th:href="@{'/employee/createEmployee/?id=' + ${id}}">Add Employee</a>
+    <a th:href="@{'/bloodStore/all/?id=' + ${id}}">Manage Blood Store</a>
+</body>
+
+</html>

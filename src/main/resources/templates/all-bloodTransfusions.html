@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Donation</title>
+    <link rel="stylesheet" th:href="@{/css/all-employee.css}">
+</head>
+
+<body>
+    <h6>All Transfusions</h6>
+    <a 
+    style="display: block; margin: 10px auto; width: fit-content;" 
+    th:href="@{'/bloodTransfusions/create/?id='+${id}}"
+    >Add Transfusions Blood</a>
+    <div class="card" th:each="prod: ${bloodTransfusions}">
+        
+        <div>
+            <span>initialPart : <span th:text=${prod.initialPart}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>quantity : <span th:text=${prod.quantity}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>bloodType : <span th:text=${prod.bloodType}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>redBloodCells : <span th:text=${prod.redBloodCells}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>plasma : <span th:text=${prod.plasma}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>platelets : <span th:text=${prod.platelets}></span></span>
+        </div>
+    </div>
+
+    <br />
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+    <h6>Create New Donation</h6>
+    <form  method="post" th:action="@{'/donation/create/?id='+ ${id}}">
+        <div>
+            <input required class="text" type="text" name="donateDate" placeholder="donateDate">
+        </div>
+        
+        <div>
+            <input hidden type="text" name="bloodType" th:value="${blood}">
+        </div>
+
+        <div>
+            <input required class="text" type="number" name="quantity" placeholder="quantity">
+        </div>
+        <div>
+            <input required class="text" type="number" name="redBloodCells" placeholder="redBloodCells">
+        </div>
+        <div>
+            <input required class="text" type="number" name="plasma" placeholder="plasma">
+        </div>
+        <div>
+            <input required class="text" type="number" name="platelets" placeholder="platelets">
+        </div>
+        <div>
+            <input class="input" type="submit" value="Add Donation">
+        </div>
+    </form>
+</body>
+
+</html>

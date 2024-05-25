@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+    <h6>Create New Check</h6>
+    <form  method="post" th:action="@{'/diseases/create/?id='+ ${id}}">
+        <div>
+            <input required class="text" type="text" name="contentExam" placeholder="contentExam">
+        </div>
+        <div>
+            <input required class="text" type="text" name="examinationDate" placeholder="examinationDate">
+        </div>
+        <div>
+            <input class="input" type="submit" value="Add Check Blood">
+        </div>
+    </form>
+</body>
+
+</html>

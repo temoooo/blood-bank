@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>employees</title>
+    <link rel="stylesheet" th:href="@{/css/manage.css}">
+</head>
+
+<body>
+    <h6>Manager</h6>
+    <a th:href="@{'/downer/create/?id=' + ${id}}">Register Downater</a>
+    <a th:href="@{'/downer/all/?id=' + ${id}}">All Downater</a>
+    <a th:href="@{'/bloodTransfusions/all/?id=' + ${id}}">All Blood Transportaition</a>
+</body>
+
+</html>

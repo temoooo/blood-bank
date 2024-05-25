@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>employees</title>
+    <link rel="stylesheet" th:href="@{/css/all-employee.css}">
+</head>
+
+<body>
+    <h6>All Store</h6>
+    <div class="card" th:each="prod: ${bloodStores}">
+        
+        <div>
+            <span>bloodType : <span th:text=${prod.bloodType}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>redBloodCells : <span th:text=${prod.redBloodCells}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>plasma : <span th:text=${prod.plasma}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>platelets : <span th:text=${prod.platelets}></span></span>
+        </div>
+    </div>
+
+</body>
+
+</html>

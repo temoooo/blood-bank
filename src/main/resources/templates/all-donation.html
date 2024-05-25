@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Donation</title>
+    <link rel="stylesheet" th:href="@{/css/all-employee.css}">
+</head>
+
+<body>
+    <h6>All Donation For This Downer</h6>
+    <a 
+    style="display: block; margin: 10px auto; width: fit-content;" 
+    th:href="@{'/donation/create/?id='+${id}}"
+    >Add Donation</a>
+    <div class="card" th:each="prod: ${donationList}">
+        <div>
+            <span>donateDate : <span th:text=${prod.donateDate}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>bloodType : <span th:text=${prod.bloodType}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>quantity : <span th:text=${prod.quantity}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>redBloodCells : <span th:text=${prod.redBloodCells}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>plasma : <span th:text=${prod.plasma}></span></span>
+        </div>
+        <br>
+        <div>
+            <span>platelets : <span th:text=${prod.platelets}></span></span>
+        </div>
+        <br>
+        <div class="manage">
+            <a th:href="@{'/donation/update/?id=' + ${prod.id}}">Update</a>
+            <a th:href="@{'/donation/delete/?id=' + ${prod.id}}">Delete</a>
+        </div>
+    </div>
+
+    <br />
+</body>
+
+</html>

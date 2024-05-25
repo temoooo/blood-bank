@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+    <h6>Create New Blood Transfusions</h6>
+    <form  method="post" th:action="@{'/bloodTransfusions/create/?id='+ ${id}}">
+        <div>
+            <input required class="text" type="text" name="initialPart" placeholder="initialPart">
+        </div>
+        <div>
+            <input required class="text" type="number" name="quantity" placeholder="quantity">
+        </div>
+        <div>
+            <select class="text" name="bloodType">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="B+">B+</option>
+                <option value="AB-">AB-</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+        </div>
+        <div>
+            <input required class="text" type="number" name="redBloodCells" placeholder="redBloodCells">
+        </div>
+        <div>
+            <input required class="text" type="number" name="plasma" placeholder="plasma">
+        </div>
+        <div>
+            <input required class="text" type="number" name="platelets" placeholder="platelets">
+        </div>
+        <div>
+            <input class="input" type="submit" value="Add Transfusions">
+        </div>
+    </form>
+</body>
+
+</html>
